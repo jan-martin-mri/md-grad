@@ -1,4 +1,20 @@
 function opt_result = jm_opt_run(opt)
+% JM_OPT_RUN Constrained optimization algorithm. Returns optimized gradient
+% waveforms.
+%
+% Arguments
+%
+%    opt - Struct containing optimization options
+%
+% Return
+%
+%    opt_result - Struct comprised of optimized gradients gx, gy, gz and
+%                 corresponding b-q vector
+%
+%
+% Ref: <a href="matlab: web ('https://www.sciencedirect.com/science/article/abs/pii/S1090780715002451?via%3Dihub')">Sjölund et al.: Constrained optimization of gradient waveforms for generalized diffusion encoding, J. Mag. Reson. 261, 157-168 (2015)</a>
+%
+% See also JM_OPT_PARAMS, JM_OPT_OPTIMSET.
 
 % In case of linear b-tensors 'max' equals 'euclid'
 if opt.lambda == 1 && strcmp(opt.norm,'euclid')

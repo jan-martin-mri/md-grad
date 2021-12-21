@@ -1,4 +1,22 @@
-function [ opt_check ] = jm_opt_check( opt_result, opt_params )
+function [opt_check] = jm_opt_check( opt_result, opt_params )
+% JM_OPT_CHECK Check and verify the results of the constrained optimization.
+%
+% Arguments
+%
+%    opt_result - Struct containing optimization results
+%
+%    opt_params - Struct containing optimization options
+%
+% Return
+%
+%    opt_check - Struct containing various reference values such as gradient
+%                amplitude, gradient slew rate, b-value, and b-tensor shape 
+%
+%
+% Ref: <a href="matlab: web ('https://www.sciencedirect.com/science/article/abs/pii/S1090780715002451?via%3Dihub')">Sjölund et al.: Constrained optimization of gradient waveforms for generalized diffusion encoding, J. Mag. Reson. 261, 157-168 (2015)</a>
+%
+% See also JM_OPT_PARAMS, JM_OPT_RUN.
+
 %% jm_opt_check
 
 % Used to verify optimized gradient trajectories achieved with jm_opt_run.

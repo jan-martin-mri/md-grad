@@ -1,9 +1,16 @@
 function opt_params = jm_opt_constants(opt)
-%jm_opt_constants Derive constant optimization parameters from user
-%supplied struct.
-%   Input: opt  Struct created with jm_opt_params
-%   Output: opt_params  Optimization parameter struct ready to be used for
-%   further optimization.
+% JM_OPT_CONSTANTS Calculates a set of constants for the constrained
+% optimization based on user defined options 'opt'.
+%
+% Arguments
+%
+%    opt - Struct containing optimization options
+%
+% Return
+%
+%    opt_params - Struct containing optimization options and constants
+%
+% See also JM_OPT_PARAMS.
 
 % Copy user supplied parameters
 opt_params = opt;

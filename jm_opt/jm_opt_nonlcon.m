@@ -1,4 +1,21 @@
 function [c,ceq] = jm_opt_nonlcon(bq,opt)
+% JM_OPT_NONLCON Returns nonlinear constraints for constrained optimization.
+%
+% Arguments
+%
+%    bq - b-q Vector being optimized
+%
+%    opt - Struct containing optimization options
+%
+% Return
+%
+%    c, ceq - Nonlinear constraints for constrained optimization.
+%
+%
+% Ref: <a href="matlab: web ('https://www.sciencedirect.com/science/article/abs/pii/S1090780715002451?via%3Dihub')">Sjölund et al.: Constrained optimization of gradient waveforms for generalized diffusion encoding, J. Mag. Reson. 261, 157-168 (2015)</a>
+%
+% Formulating Constraints: <a href="matlab: web ('https://de.mathworks.com/help/optim/ug/nonlinear-equality-and-inequality-constraints.html')">Nonlinear equality and inequality constraints in Matlab</a>
+
 % jm, 11.03.2019: WIP version includes options for spectral optimization.
     b = bq(1);
     Q = reshape(bq(2:end),opt.nodes+1,[]);

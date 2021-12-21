@@ -1,4 +1,20 @@
 function [A,b] = jm_opt_linIneq(opt)
+% JM_OPT_LININEQ Returns linear inequality constraints for constrained 
+% optimization.
+%
+% Arguments
+%
+%    opt - Struct containing optimization options
+%
+% Return
+%
+%    A, b - Inequality constraints for constrained optimization.
+%
+%
+% Ref: <a href="matlab: web ('https://www.sciencedirect.com/science/article/abs/pii/S1090780715002451?via%3Dihub')">Sjölund et al.: Constrained optimization of gradient waveforms for generalized diffusion encoding, J. Mag. Reson. 261, 157-168 (2015)</a>
+%
+% Formulating Constraints: <a href="matlab: web ('https://de.mathworks.com/help/optim/ug/nonlinear-equality-and-inequality-constraints.html')">Nonlinear equality and inequality constraints in Matlab</a>
+
 
 % Check that opt contains instructions for jm_opt_linIneq
 if ~isfield(opt,'norm') || ~isfield(opt,'lambda')

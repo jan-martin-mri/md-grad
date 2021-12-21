@@ -1,4 +1,21 @@
 function bq_init = jm_opt_init(opt)
+% JM_OPT_INIT Returns initial b-q vector for constrained optimization.
+%
+% Arguments
+%
+%    opt - Struct containing optimization options
+%
+% Return
+%
+%    bq_init - Dimension nodes+2 x 1 initial b-q vector
+%
+% Initial b-q vector is either comprised of random values or zeros 
+% depending on the value of opt.init. 
+%
+%
+% Ref: <a href="matlab: web ('https://www.sciencedirect.com/science/article/abs/pii/S1090780715002451?via%3Dihub')">Sjölund et al.: Constrained optimization of gradient waveforms for generalized diffusion encoding, J. Mag. Reson. 261, 157-168 (2015)</a>
+%
+% See also JM_OPT_PARAMS.
 
 % Check that opt contains instructions for jm_opt_init
 if ~isfield(opt,'init') || ~isfield(opt,'lambda')
