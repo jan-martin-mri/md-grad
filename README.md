@@ -13,3 +13,5 @@ jm_opt_check(res, opt);
 ```
 
 Convergence speed depends on the optimization settings. A good solution is typically characterized by the highest possible b-value while also showing a smooth gradient amplitude waveform.
+
+A range of support functions exists that allows interpolating the optimization results to a higher number of nodes for use at the scanner, creating simple trapezoidal waveforms for specific slew rates, and exporting the results as .csv files.
